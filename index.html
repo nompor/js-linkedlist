@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="src/js-linkedlist.js"></script>
+<script>
+/*
+* Test result is console.log method print.
+*/
+
+var list = new LinkedList();
+list.addLast("あ");
+list.addFirst("か");
+list.addFirst("さ");
+ 
+console.log("最初の要素:"+list.first);
+console.log("最後の要素:"+list.last);
+ 
+//結果を逆順表示
+list.forEachReverse(function(e,idx){console.log("idx="+idx+":"+e);});
+ 
+//要素数の表示
+console.log("要素数:"+list.length);
+ 
+//要素の全削除
+list.clear();
+ 
+//削除されているか中身を確認
+list.forEachReverse(function(e){console.log(e);});
+ 
+//要素数の表示
+console.log("要素数:"+list.length);
+
+</script>
+</head>
+<body></body>
+</html>
