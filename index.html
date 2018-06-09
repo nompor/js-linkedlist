@@ -6,28 +6,18 @@
 * Test result is console.log method print.
 */
 
-var list = new LinkedList();
-list.addLast("あ");
-list.addFirst("か");
-list.addFirst("さ");
+//初期化時にデータ追加
+var list = new LinkedList(100,200,300);
+var data = list.pop();
+list.push(400);
+var data2 = list.shift();
+list.unshift(50);
  
-console.log("最初の要素:"+list.first);
-console.log("最後の要素:"+list.last);
+console.log("popで取り出された要素:"+data);
+console.log("shiftで取り出された要素:"+data2);
  
-//結果を逆順表示
-list.forEachReverse(function(e,idx){console.log("idx="+idx+":"+e);});
- 
-//要素数の表示
-console.log("要素数:"+list.length);
- 
-//要素の全削除
-list.clear();
- 
-//削除されているか中身を確認
-list.forEachReverse(function(e){console.log(e);});
- 
-//要素数の表示
-console.log("要素数:"+list.length);
+//結果を表示
+list.forEach(function(e){console.log(e);});
 
 </script>
 </head>
